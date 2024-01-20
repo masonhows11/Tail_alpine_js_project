@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+    </head>
+    <body class="font-vazirmediumfd bg-slate-100">
+
+        <div class="container mx-auto">
+
+            <div class="mt-5 text-center text-3xl border-b-2 border-b-rose-500">
+                <h1 x-data="{ message : 'i love Fucking  Alpine Js ' }" x-text="message"></h1>
+            </div>
+
+            <div class="mt-5 text-center text-3xl border-b-2 border-b-rose-500 p-2"  x-data="{ message : 'i love Fucking  Alpine Js in other div ' }"> 
+
+                <p x-text="message" class=" text-red-600"></h1>
+                <hr>
+                <button class="bg-blue-400 rounded-lg p-4 mt-4" x-on:click="message = 'messages replace with fuck uuuuuuuuuuuuu' ">Click Me Fuckker</button>
+
+            </div>
+
+
+            <div x-data="{ count:0 }" class="mt-5 text-center border-2 border-blue-900 p-2">
+
+                <div>
+                    <button class="bg-blue-400 rounded-lg p-2 mt-2" x-on:click="count ++">
+                        Increase value onclick me
+                    </button>
+
+                    <button class="bg-blue-400 rounded-lg p-2 mt-2" x-on:click="count --">
+                        Decrease value onclick me
+                    </button>
+                </div>
+
+                <div>
+                    <span x-text="count"></span>
+                </div>
+
+               
+
+            </div>
+
+            <div x-data="{ Myfunction:()=>{ alert('hello world') } }" class="mt-5 text-center border-2 border-blue-900 p-2">
+                <div>
+                    <button class="bg-blue-400 rounded-lg p-2 mt-2" x-on:click="Myfunction()">
+                      click me run function
+                    </button>
+                </div>
+            </div>
+
+
+            <div x-data="{ Myfunction(){ alert('hello world') } }" class="mt-5 text-center border-2 border-blue-900 p-2">
+                <div>
+                    <button class="bg-blue-400 rounded-lg p-2 mt-2" x-on:click="Myfunction()">
+                      click me run function 2
+                    </button>
+                </div>
+            </div>
+
+
+
+            <div x-data="{  message:'test apline from message property', 
+                            my_array: ['hello','fucking','alpine js'],
+                            Myfunction()  {  alert( this.message )  } }"  class="mt-5 text-center border-2 border-blue-900 p-2">
+                <div>
+                    <button class="bg-blue-400 rounded-lg p-2 mt-2" x-on:click="Myfunction()">
+                      click me run function 3
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- test alpine js data in seperate js file -->
+            <div x-data="myData()" class="mt-5 text-center border-2 border-blue-900 p-2">
+
+                <button class="bg-blue-400 rounded-lg p-2 mt-2" x-on:click="Myfunction()">
+                    click me run function 4
+                  </button>
+
+            </div>
+
+
+           
+
+        </div>
+
+       
+        <script type="module" src="./app/alpine.min.js" defer></script>
+        <script src="./app/alpine_app.js"></script>
+    </body>
+</html>

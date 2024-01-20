@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/assets/input.css -o ./src/assets/style.css --watch",
+    "build": "npx tailwindcss -i ./src/assets/input.css -o ./src/assets/style.css --minify",
+    "serve": "live-server ./src"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.3",
+    "live-server": "^1.1.0"
+  }
+}
