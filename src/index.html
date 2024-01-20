@@ -30,6 +30,7 @@
                                 <th>name</th>
                                 <th>user name</th>
                                 <th>email</th>
+                                <th>city</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,6 +40,7 @@
                                     <td x-text="user.name"></td>
                                     <td x-text="user.username"></td>
                                     <td x-text="user.email"></td>
+                                    <td x-text="user.address.city+' '+ user.address.street+' '+user.address.suite "></td>
                                 </tr>
                             </template>
                         </tbody>
