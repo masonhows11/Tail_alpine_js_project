@@ -38,3 +38,4 @@ document.addEventListener('alpine:init', () => {
 
     }))
 })
+

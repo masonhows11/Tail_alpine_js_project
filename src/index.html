@@ -10,10 +10,10 @@
 
 
 
-        <div class="hidden w-full h-full fixed top-0 bg-gray-900 bg-opacity-50"></div>
+        <div class="hidden w-full h-full fixed top-0 bg-gray-900 bg-opacity-50" id="overlay"></div>
 
         <!-- navbar section -->
-        <nav class="flex  bg-slate-500 text-white h-12">
+        <nav class="flex  bg-slate-500  text-white h-12">
             <div class="w-1/2 h-12 flex items-center max-sm:hidden">
                 <ul class=" mr-4 flex space-x-7 space-x-reverse">
                     <li><a href="#">خانه</a></li>
@@ -24,7 +24,7 @@
             </div>
             <div class="w-1/2 flex justify-end max-sm:justify-start max-sm:mr-2 items-center">
                 <div class="ml-2 sm:mr-2">
-                    <span class="hidden max-sm:block">
+                    <span class="hidden max-sm:block" id="open-sidebar">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                           </svg>                          
@@ -32,6 +32,65 @@
                 </div>
             </div>
         </nav>
+
+        <!-- sidebar section -->
+        <div class="hidden w-64 fixed h-full">
+
+             <!-- sidebar close button -->
+             <button class="hidden absolute z-50 -left-12 top-4" id="close-sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                  
+            </button>
+
+            <div class="bg-indigo-700 overflow-y-auto flex flex-col flex-grow text-white pt-5" id="sidebar-content-layout">
+
+        </div>
+
+        <script>
+
+
+            const sidebar = document.getElementById('sidebar');
+            const closeSidebarBtn = document.getElementById('close-sidebar');
+            const openSidebarBtn = document.getElementById('open-sidebar');
+            const overlay = document.getElementById('overlay');
+
+
+            function openSidebar(){
+                 ////
+                sidebar.classList.add('absolute','z-50','flex','flex-row-reverse');
+                sidebar.classList.remove('hidden');
+                 ////
+                closeSidebarBtn.classList.remove('hidden');
+                closeSidebarBtn.classList.add('flex');
+                 ////
+                document.body.classList.add('overflow-hidden');
+                overlay.classList.remove('hidden');
+            }
+
+
+            function closeSidebar(){
+                ////
+                sidebar.classList.remove('absolute','z-50','flex','flex-row-reverse');
+                sidebar.classList.add('hidden');
+                ////
+                closeSidebarBtn.classList.add('hidden');
+                closeSidebarBtn.classList.remove('flex');
+                ////
+                document.body.classList.remove('overflow-hidden');
+                overlay.classList.add('hidden');
+            }
+
+                openSidebarBtn.addEventListener('click',() => openSidebar());
+                closeSidebarBtn.addEventListener('click',() => closeSidebar());
+
+                overlay.addEventListener('click', () => closeSidebar());
+                window.addEventListener('resize', () => closeSidebar());
+
+            
+
+
+        </script>
 
         <script type="module" src="./app/alpine.min.js" defer></script>
         <script type="text/javascript" src="./app/axios.min.js"></script>
