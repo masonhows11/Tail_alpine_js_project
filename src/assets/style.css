@@ -846,18 +846,38 @@ video {
 }
 
 @media not all and (min-width: 640px) {
+  .max-sm\:mr-2 {
+    margin-right: 0.5rem;
+  }
+
   .max-sm\:block {
     display: block;
+  }
+
+  .max-sm\:hidden {
+    display: none;
+  }
+
+  .max-sm\:justify-start {
+    justify-content: flex-start;
   }
 }
 
 @media (min-width: 640px) {
+  .sm\:mr-2 {
+    margin-right: 0.5rem;
+  }
+
   .sm\:block {
     display: block;
   }
 
   .sm\:flex {
     display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 }
 
