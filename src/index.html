@@ -6,49 +6,9 @@
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="assets/style.css">
     </head>
-    <body class="font-vazirmediumfd bg-slate-100" x-data="globalData">
+    <body class="font-vazirmediumfd bg-slate-100">
 
-        <div class="container mx-auto">
-
-            <div class="mt-5 text-center text-3xl border-b-2 py-2 border-b-rose-500">
-                <h1 x-data="{ message : 'i love Fucking  Alpine Js ' }" x-text="message"></h1>
-            </div>
-
-
-            <div class="mt-5 text-center text-3xl border-b-2 py-2 border-b-rose-500">
-
-               <div>
-                 <h1>List users</h1>
-               </div>
-
-               <div x-init="getUsers()" class="flex justify-center items-center">
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>name</th>
-                                <th>user name</th>
-                                <th>email</th>
-                                <th>city</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <template x-for="user in users">
-                                <tr>
-                                    <td x-text="user.id"></td>
-                                    <td x-text="user.name"></td>
-                                    <td x-text="user.username"></td>
-                                    <td x-text="user.email"></td>
-                                    <td x-text="user.address.city+' '+ user.address.street+' '+user.address.suite "></td>
-                                </tr>
-                            </template>
-                        </tbody>
-                    </table>
-                </div>
-               </div>
-            </div>
-        </div>
+        
 
        
         <script type="module" src="./app/alpine.min.js" defer></script>
