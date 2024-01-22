@@ -10,7 +10,7 @@
 
 
 
-        <!-- <div class="w-full h-full fixed top-0 right-0 bg-gray-900 bg-opacity-50" id="overlay"></div> -->
+        <!-- <div class="w-full h-full fixed top-0 right-0 bg-gray-900 bg-opacity-50" id="overlay"></div>  -->
 
        
 
@@ -30,36 +30,39 @@
         </div>
 
 
-        <div class="mr-64 flex flex-col">
+
+        <!-- main section -->
+        <div class="md:pr-64 flex  flex-col">
 
              <!-- navbar section -->
 
-             <div class="bg-slate-500 flex justify-between items-center shadow px-4">
+                <div class="bg-slate-500 h-16 flex justify-between items-center shadow px-4">
 
-                    <nav class="text-white h-12">
-                        <div class="h-12">
-                            <ul class="flex items-center  h-12 mr-4  space-x-7 space-x-reverse">
-                                <li><a href="#">خانه</a></li>
-                                <li><a href="#">محصولات</a></li>
-                                <li><a href="#">درباره ما</a></li>
-                                <li>تماس با ما</li>
-                            </ul>
-                        </div>  
-                    </nav>
+                        <button class="md:hidden text-gray-50">
+                            <span class="" id="open-sidebar">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                                </svg>                          
+                            </span>
+                        </button> 
 
 
-                    <button class="md:hidden text-gray-50">
-                        <span class="" id="open-sidebar">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                            </svg>                          
-                        </span>
-                    </button> 
+                        <div class="w-full flex">
+                            <nav class="text-white h-12 ">
+                                <div class="h-12">
+                                    <ul class="flex items-center  h-12 mr-4  space-x-7 space-x-reverse">
+                                        <li><a href="#">خانه</a></li>
+                                        <li><a href="#">محصولات</a></li>
+                                        <li><a href="#">درباره ما</a></li>
+                                        <li>تماس با ما</li>
+                                    </ul>
+                                </div>  
+                            </nav>
+                        </div>
 
-                   
-             </div>
+                </div>
                
-           
+             <!-- main content  -->
                 <main>
                     <div class="p-8">
                         <div class="max-w-7xl mx-auto">

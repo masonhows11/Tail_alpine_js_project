@@ -683,6 +683,10 @@ video {
   height: 0.25rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -973,11 +977,19 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mr-64 {
+    margin-right: 16rem;
+  }
+
   .md\:flex {
     display: flex;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:pr-64 {
+    padding-right: 16rem;
   }
 }
