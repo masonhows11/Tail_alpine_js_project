@@ -10,31 +10,13 @@
 
 
 
-        <div class="hidden w-full h-full fixed top-0 bg-gray-900 bg-opacity-50" id="overlay"></div>
+        <!-- <div class="w-full h-full fixed top-0 right-0 bg-gray-900 bg-opacity-50" id="overlay"></div> -->
 
-        <!-- navbar section -->
-        <nav class="flex  bg-slate-500  text-white h-12">
-            <div class="w-1/2 h-12 flex items-center max-sm:hidden">
-                <ul class=" mr-4 flex space-x-7 space-x-reverse">
-                    <li><a href="#">خانه</a></li>
-                    <li><a href="#">محصولات</a></li>
-                    <li><a href="#">درباره ما</a></li>
-                    <li>تماس با ما</li>
-                </ul>
-            </div>
-            <div class="w-1/2 flex justify-end max-sm:justify-start max-sm:mr-2 items-center">
-                <div class="ml-2 sm:mr-2">
-                    <span class="hidden max-sm:block" id="open-sidebar">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                          </svg>                          
-                    </span>
-                </div>
-            </div>
-        </nav>
+       
 
         <!-- sidebar section -->
-        <div class="hidden w-64 fixed h-full transition ease-in-out duration-200" id="sidebar">
+        <!-- transition ease-in-out duration-200 -->
+        <div class="w-64 fixed md:flex h-full" id="sidebar">
 
              <!-- sidebar close button -->
              <button class="hidden absolute z-50 -left-12 top-4" id="close-sidebar">
@@ -43,9 +25,42 @@
                   </svg>                  
             </button>
 
-            <div class="bg-indigo-700 overflow-y-auto flex flex-col flex-grow text-white pt-5" id="sidebar-content-layout">
-
+            <div class="bg-indigo-700 overflow-y-auto flex flex-col flex-grow text-white pt-5" id="sidebar-content-layout"> </div>
         </div>
+
+
+
+
+
+        <div class="mr-64">
+
+             <!-- navbar section -->
+            <nav class="bg-slate-500  text-white h-12">
+                 <div class="h-12 ">
+                        <ul class=" mr-4 flex space-x-7 space-x-reverse">
+                            <li><a href="#">خانه</a></li>
+                            <li><a href="#">محصولات</a></li>
+                            <li><a href="#">درباره ما</a></li>
+                            <li>تماس با ما</li>
+                        </ul>
+                    </div>
+
+                    <div class="">
+                        <div class="ml-2">
+                            <span class="" id="open-sidebar">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                                </svg>                          
+                            </span>
+                        </div>
+                    </div> 
+                            
+            </nav>
+
+        </div> 
+
+       
+
 
         <script>
 
@@ -58,7 +73,7 @@
 
             function openSidebar(){
                  ////
-                sidebar.classList.add('absolute','z-50','flex','flex-row-reverse');
+                sidebar.classList.add('absolute','z-50','flex','flex-row-reverse','transition','ease-in-out','duration-200');
                 sidebar.classList.remove('hidden');
                  ////
                 closeSidebarBtn.classList.remove('hidden');
